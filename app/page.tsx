@@ -5,10 +5,17 @@ import Nosotros from "./components/Nosotros";
 import Portafolio from "./components/Portafolio";
 import Contacto from "./components/Contacto";
 import Footer from "./components/Footer";
+import CursorGlow from "./components/CursorGlow";
+import SmoothScroll from "./components/SmoothScroll";
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-[#0A0F1C] text-white overflow-x-hidden">
+      {/* utilidades */}
+      <CursorGlow />
+      <SmoothScroll />
+
+      {/* paginas */}
       <Navbar />
       <Hero />
       <Servicios />

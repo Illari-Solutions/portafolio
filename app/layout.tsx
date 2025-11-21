@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "ILLARI - Desarrollo Web & Dominios",
+  title: "ILLARI - Solutions",
   description: "Llevamos tu negocio al mundo digital. Creación de páginas web profesionales y gestión de dominios en Arequipa, Perú.",
   keywords: ["desarrollo web", "páginas web", "dominios", "hosting", "Arequipa", "Perú", "ILLARI"],
   authors: [{ name: "ILLARI" }],

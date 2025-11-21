@@ -24,7 +24,7 @@ export default function Footer() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div className="sm:col-span-2 lg:col-span-1">
             <Link href="#home" className="flex items-center gap-3 mb-4">
-              <Image src="/logo.png" alt="ILLARI" width={40} height={40} className="rounded-lg" />
+              <Image src="/logo_nobg.png" alt="ILLARI" width={40} height={40} className="rounded-lg" />
               <span className="text-xl font-bold gradient-text">ILLARI</span>
             </Link>
             <p className="text-gray-400 text-sm leading-relaxed mb-4">Transformamos tu visión en una presencia digital impactante. Desarrollo web profesional desde Arequipa.</p>
