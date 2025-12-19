@@ -1,0 +1,112 @@
+<svg width="1200" height="1200" viewBox="0 0 1200 1200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradiente principal más brillante -->
+    <radialGradient id="eyeGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#00F0FF;stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#06B6D4;stop-opacity:0.9" />
+      <stop offset="60%" style="stop-color:#0891B2;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#164E63;stop-opacity:0.3" />
+    </radialGradient>
+    
+    <!-- Gradiente para circuitos más brillante -->
+    <linearGradient id="circuit" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00F0FF;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#06B6D4;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#0891B2;stop-opacity:0.7" />
+    </linearGradient>
+
+    <!-- Filtro de brillo -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Aura externa del ojo -->
+  <ellipse cx="600" cy="600" rx="500" ry="300" fill="url(#eyeGlow)" opacity="0.15" filter="url(#glow)"/>
+  <ellipse cx="600" cy="600" rx="480" ry="280" fill="none" stroke="#00F0FF" stroke-width="2" opacity="0.3"/>
+  
+  <!-- Forma del ojo principal -->
+  <ellipse cx="600" cy="600" rx="420" ry="250" fill="url(#eyeGlow)" opacity="0.3"/>
+  <ellipse cx="600" cy="600" rx="400" ry="230" stroke="#06B6D4" stroke-width="3" fill="none" opacity="0.6"/>
+  
+  <!-- Iris brillante -->
+  <circle cx="600" cy="600" r="180" fill="url(#eyeGlow)" opacity="0.8" filter="url(#glow)"/>
+  <circle cx="600" cy="600" r="160" fill="#0891B2" opacity="0.9"/>
+  <circle cx="600" cy="600" r="145" stroke="#00F0FF" stroke-width="3" fill="none" opacity="0.7"/>
+  <circle cx="600" cy="600" r="130" stroke="#06B6D4" stroke-width="2" fill="none" opacity="0.5"/>
+  
+  <!-- Pupila oscura con borde brillante -->
+  <circle cx="600" cy="600" r="75" fill="#000000"/>
+  <circle cx="600" cy="600" r="70" stroke="#00F0FF" stroke-width="3" fill="none" opacity="0.8"/>
+  
+  <!-- Brillo intenso en el ojo -->
+  <circle cx="625" cy="570" r="28" fill="#00F0FF" opacity="1" filter="url(#glow)"/>
+  <circle cx="635" cy="560" r="15" fill="#FFFFFF" opacity="1"/>
+  
+  <!-- Partículas brillantes alrededor del ojo -->
+  <circle cx="450" cy="500" r="4" fill="#00F0FF" opacity="0.9"/>
+  <circle cx="750" cy="500" r="4" fill="#00F0FF" opacity="0.9"/>
+  <circle cx="520" cy="700" r="4" fill="#06B6D4" opacity="0.9"/>
+  <circle cx="680" cy="700" r="4" fill="#06B6D4" opacity="0.9"/>
+  <circle cx="600" cy="420" r="5" fill="#00F0FF" opacity="1"/>
+  <circle cx="600" cy="780" r="5" fill="#00F0FF" opacity="1"/>
+  
+  <!-- Líneas de circuito principales MÁS BRILLANTES -->
+  
+  <!-- Superior -->
+  <line x1="600" y1="120" x2="600" y2="350" stroke="url(#circuit)" stroke-width="4" opacity="0.8"/>
+  <circle cx="600" cy="100" r="12" fill="#00F0FF" opacity="1" filter="url(#glow)"/>
+  <circle cx="600" cy="100" r="8" fill="#FFFFFF" opacity="1"/>
+  
+  <line x1="500" y1="180" x2="560" y2="420" stroke="url(#circuit)" stroke-width="3" opacity="0.7"/>
+  <circle cx="480" cy="160" r="10" fill="#06B6D4" opacity="0.9"/>
+  
+  <line x1="700" y1="180" x2="640" y2="420" stroke="url(#circuit)" stroke-width="3" opacity="0.7"/>
+  <circle cx="720" cy="160" r="10" fill="#06B6D4" opacity="0.9"/>
+  
+  <!-- Inferior -->
+  <line x1="600" y1="850" x2="600" y2="1080" stroke="url(#circuit)" stroke-width="4" opacity="0.8"/>
+  <circle cx="600" cy="1100" r="12" fill="#00F0FF" opacity="1" filter="url(#glow)"/>
+  <circle cx="600" cy="1100" r="8" fill="#FFFFFF" opacity="1"/>
+  
+  <line x1="500" y1="1020" x2="560" y2="780" stroke="url(#circuit)" stroke-width="3" opacity="0.7"/>
+  <circle cx="480" cy="1040" r="10" fill="#06B6D4" opacity="0.9"/>
+  
+  <line x1="700" y1="1020" x2="640" y2="780" stroke="url(#circuit)" stroke-width="3" opacity="0.7"/>
+  <circle cx="720" cy="1040" r="10" fill="#06B6D4" opacity="0.9"/>
+  
+  <!-- Izquierda -->
+  <line x1="120" y1="600" x2="350" y2="600" stroke="url(#circuit)" stroke-width="4" opacity="0.8"/>
+  <circle cx="100" cy="600" r="12" fill="#00F0FF" opacity="1" filter="url(#glow)"/>
+  <circle cx="100" cy="600" r="8" fill="#FFFFFF" opacity="1"/>
+  
+  <line x1="180" y1="500" x2="420" y2="560" stroke="url(#circuit)" stroke-width="3" opacity="0.7"/>
+  <circle cx="160" cy="480" r="10" fill="#06B6D4" opacity="0.9"/>
+  
+  <line x1="180" y1="700" x2="420" y2="640" stroke="url(#circuit)" stroke-width="3" opacity="0.7"/>
+  <circle cx="160" cy="720" r="10" fill="#06B6D4" opacity="0.9"/>
+  
+  <!-- Derecha -->
+  <line x1="1080" y1="600" x2="850" y2="600" stroke="url(#circuit)" stroke-width="4" opacity="0.8"/>
+  <circle cx="1100" cy="600" r="12" fill="#00F0FF" opacity="1" filter="url(#glow)"/>
+  <circle cx="1100" cy="600" r="8" fill="#FFFFFF" opacity="1"/>
+  
+  <line x1="1020" y1="500" x2="780" y2="560" stroke="url(#circuit)" stroke-width="3" opacity="0.7"/>
+  <circle cx="1040" cy="480" r="10" fill="#06B6D4" opacity="0.9"/>
+  
+  <line x1="1020" y1="700" x2="780" y2="640" stroke="url(#circuit)" stroke-width="3" opacity="0.7"/>
+  <circle cx="1040" cy="720" r="10" fill="#06B6D4" opacity="0.9"/>
+  
+  <!-- Anillos de datos tecnológicos en el iris -->
+  <circle cx="600" cy="600" r="115" stroke="#00F0FF" stroke-width="1.5" fill="none" opacity="0.5" stroke-dasharray="10,10"/>
+  <circle cx="600" cy="600" r="100" stroke="#06B6D4" stroke-width="1.5" fill="none" opacity="0.5" stroke-dasharray="8,8"/>
+  <circle cx="600" cy="600" r="85" stroke="#00F0FF" stroke-width="1" fill="none" opacity="0.4" stroke-dasharray="5,5"/>
+  
+  <!-- Líneas de escaneo diagonal -->
+  <line x1="550" y1="550" x2="650" y2="650" stroke="#00F0FF" stroke-width="1" opacity="0.3"/>
+  <line x1="650" y1="550" x2="550" y2="650" stroke="#00F0FF" stroke-width="1" opacity="0.3"/>
+</svg>
