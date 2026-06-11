@@ -1,53 +1,59 @@
 import { ExternalLink, TrendingUp, Users, ShoppingCart, ArrowRight } from "lucide-react";
 
 const projects = [
-  { 
-    name: "TechStore", 
-    type: "E-commerce", 
-    desc: "Aumentó ventas online en 250% en 3 meses", 
+  {
+    name: "Incaltex SRL",
+    type: "Sitio Corporativo",
+    desc: "Catálogo industrial optimizado para la exposición y cotización técnica de productos textiles.",
+    gradient: "from-blue-600 to-indigo-700",
+    result: "Catálogo Digital",
+    icon: <Users size={24} />,
+    url: "https://incaltex-jet.vercel.app/"
+  },
+  {
+    name: "SmartVentas",
+    type: "E-commerce",
+    desc: "Plataforma de comercio electrónico con flujo de conversión ágil y gestión de inventario.",
     gradient: "from-cyan-500 to-blue-600",
-    result: "+250% ventas",
-    icon: <ShoppingCart size={24} />
+    result: "Ventas Digitales",
+    icon: <ShoppingCart size={24} />,
+    url: "https://smart-ventas-express-git-main-illari-solutions-projects.vercel.app"
   },
-  { 
-    name: "Restaurante Sabor", 
-    type: "Landing Page", 
-    desc: "De 0 a 80 reservas mensuales por su web", 
+  {
+    name: "Academia Berkeley",
+    type: "Plataforma Educativa",
+    desc: "Portal interactivo desarrollado para la administración de matrículas y visualización de cursos.",
+    gradient: "from-purple-500 to-indigo-600",
+    result: "Matrículas Online",
+    icon: <Users size={24} />,
+    url: "https://academia-berkeley.vercel.app/"
+  },
+  {
+    name: "Restaurante Grieta",
+    type: "Landing Page",
+    desc: "Sitio web gastronómico con menú interactivo y optimización de reservas en tiempo real.",
     gradient: "from-orange-500 to-red-500",
-    result: "80 reservas/mes",
-    icon: <TrendingUp size={24} />
+    result: "Reservas Web",
+    icon: <TrendingUp size={24} />,
+    url: "https://grieta-q9kn.vercel.app/"
   },
-  { 
-    name: "Consultora Legal", 
-    type: "Sitio Corporativo", 
-    desc: "Triplicó consultas de clientes potenciales", 
-    gradient: "from-gray-600 to-gray-800",
-    result: "3x consultas",
-    icon: <Users size={24} />
+  {
+    name: "Acciona Inmobiliaria",
+    type: "Portal Inmobiliario",
+    desc: "Plataforma para la visualización de propiedades y captación automatizada de leads calificados.",
+    gradient: "from-emerald-500 to-teal-600",
+    result: "Captación 2x",
+    icon: <TrendingUp size={24} />,
+    url: "https://acciona-inmobiliaria.vercel.app"
   },
-  { 
-    name: "FitGym", 
-    type: "Aplicación Web", 
-    desc: "Automatizó inscripciones y ahorró 15 hrs/semana", 
-    gradient: "from-green-500 to-emerald-600",
-    result: "15 hrs ahorradas",
-    icon: <TrendingUp size={24} />
-  },
-  { 
-    name: "Inmobiliaria Plus", 
-    type: "Portal Web", 
-    desc: "Duplicó leads calificados en 2 meses", 
-    gradient: "from-purple-500 to-pink-500",
-    result: "2x leads",
-    icon: <TrendingUp size={24} />
-  },
-  { 
-    name: "Clínica Dental", 
-    type: "Sitio con Citas", 
-    desc: "95% de citas ahora se agenda online", 
-    gradient: "from-blue-400 to-cyan-500",
-    result: "95% automatización",
-    icon: <Users size={24} />
+  {
+    name: "Restaurante InKari",
+    type: "Sitio Gastronómico",
+    desc: "Interfaz web enfocada en la experiencia del usuario para pedidos locales y posicionamiento de marca.",
+    gradient: "from-amber-500 to-orange-600",
+    result: "Pedidos Integrados",
+    icon: <ShoppingCart size={24} />,
+    url: "https://inkari-restaurante.vercel.app"
   },
 ];
 
@@ -71,13 +77,22 @@ export default function Portafolio() {
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, i) => (
-            <div key={i} className="group cursor-pointer">
+            <a
+              key={i}
+              href={project.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group block cursor-pointer text-white no-underline"
+            >
               <div className={`relative bg-linear-to-br ${project.gradient} rounded-2xl p-8 h-72 flex flex-col justify-between overflow-hidden transition-transform hover:scale-105`}>
                 <div className="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors"></div>
-                
-                {/* Badge de tipo */}
-                <div className="relative z-10">
-                  <span className="inline-block px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-xs font-medium">{project.type}</span>
+
+                {/* Badge de tipo e ícono de enlace */}
+                <div className="relative z-10 flex justify-between items-center">
+                  <span className="inline-block px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-xs font-medium">
+                    {project.type}
+                  </span>
+                  <ExternalLink size={18} className="text-white/70 group-hover:text-white transition-colors" />
                 </div>
 
                 {/* Contenido principal */}
@@ -89,7 +104,7 @@ export default function Portafolio() {
                     </h3>
                   </div>
                   <p className="text-white/90 text-sm mb-4">{project.desc}</p>
-                  
+
                   {/* Resultado destacado */}
                   <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/20 backdrop-blur-sm rounded-lg border border-white/30">
                     <TrendingUp size={18} />
@@ -99,11 +114,11 @@ export default function Portafolio() {
 
                 <div className="absolute -top-10 -right-10 w-32 h-32 bg-white/10 rounded-full"></div>
               </div>
-            </div>
+            </a>
           ))}
         </div>
 
-        {/* Testimonios y CTA */}
+        {/* Testimonios actualizados con los nuevos proyectos reales */}
         <div className="mt-16 grid md:grid-cols-2 gap-8">
           <div className="card-illari bg-gradient-to-br from-cyan-500/10 to-blue-500/10 border-cyan-500/20">
             <div className="text-4xl mb-4">💬</div>
@@ -111,12 +126,12 @@ export default function Portafolio() {
               "ILLARI no solo creó nuestra página, nos ayudó a entender cómo usar la web para crecer. En 3 meses duplicamos nuestras ventas online."
             </p>
             <div className="flex items-center gap-3">
-              <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-full flex items-center justify-center font-bold">
+              <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-full flex items-center justify-center font-bold text-white">
                 JR
               </div>
               <div>
                 <p className="font-bold text-cyan-400">Juan Rodríguez</p>
-                <p className="text-gray-500 text-sm">CEO, TechStore</p>
+                <p className="text-gray-500 text-sm">CEO, SmartVentas</p>
               </div>
             </div>
           </div>
@@ -127,12 +142,12 @@ export default function Portafolio() {
               "Profesionales, rápidos y muy pacientes explicando todo. Ahora nuestros clientes nos encuentran fácilmente en Google."
             </p>
             <div className="flex items-center gap-3">
-              <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center font-bold">
+              <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center font-bold text-white">
                 MC
               </div>
               <div>
                 <p className="font-bold text-purple-400">María Contreras</p>
-                <p className="text-gray-500 text-sm">Dueña, Restaurante Sabor</p>
+                <p className="text-gray-500 text-sm">Dueña, Restaurante Grieta</p>
               </div>
             </div>
           </div>
